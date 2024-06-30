@@ -1,6 +1,7 @@
 
 import 'package:ecommer/features/authentication/screens/login/widget/divider.dart';
 import 'package:ecommer/features/authentication/screens/login/widget/footer.dart';
+import 'package:ecommer/features/authentication/screens/signup/widget/form_sign_up.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -27,84 +28,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               SizedBox(height: 20,),
-              Form(
-                  child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.person),
-                              labelText: "First name",
-                              border: OutlineInputBorder()),
-                        ),
-                      ),
-                      SizedBox(width: 10,),
-                      Expanded(
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.person),
-                              labelText: "Family name",
-                              border: OutlineInputBorder()),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10,),
-                  TextFormField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.account_box),
-                        labelText: "Username",
-                        border: OutlineInputBorder()),
-                  ),
-                  SizedBox(height: 10,),
-                  TextFormField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.mail),
-                        labelText: "Email",
-                        border: OutlineInputBorder()),
-                  ),
-                  SizedBox(height: 10,),
-                  TextFormField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.phone_android),
-                        labelText: "Phone Number",
-                        border: OutlineInputBorder()),
-                  ),
-                  SizedBox(height: 10,),
-                  TextFormField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.password),
-                        suffixIcon: IconButton(icon: Icon(Icons.remove_red_eye),onPressed: ()=>{},),
-                        labelText: "Password",
-                        border: OutlineInputBorder()),
-                  ),
-                  SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Checkbox(value: true, onChanged: (value)=>{}),
-                      
-                      SizedBox(width: 10,),
-                      Text("I agree to Privacy Policy and Terms of use")
-        
-                    ],
-                  ),
-                  SizedBox(
-                      width: double.infinity,
-                      height: 60,
-                      child: ElevatedButton(onPressed: ()=>{}, child: Text("Create Account"))),
-                  SizedBox(height: 10,),
-                  Cusdevider(),
-                  SizedBox(height: 10,),
-                  Cusfooter(),
-        
-        
-        
-        
-                ],
-              ))
+              FormSignUp(),
+              SizedBox(height: 20,),
+              Cusdevider(),
+              SizedBox(height: 20,),
+              Cusfooter(),
             ],
           ),
         ),
@@ -112,3 +40,4 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 }
+
