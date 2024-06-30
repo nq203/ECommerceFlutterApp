@@ -1,14 +1,27 @@
 import 'package:ecommer/common/styles/space_style.dart';
+import 'package:ecommer/features/authentication/screens/login/widget/header.dart';
 
 import 'package:ecommer/utils/helppers/helper_functions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class LoginScreen extends StatelessWidget {
+import 'widget/divider.dart';
+import 'widget/footer.dart';
+import 'widget/input_form.dart';
+
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  @override
   Widget build(BuildContext context) {
     final isDarkMode = HelperFunction.isDarkMode(context);
+    bool hidePassword = true;
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -17,55 +30,19 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // header
-              Column(
-                children: [
-                  SizedBox(height: 40),
-                  Image(
-                      height: HelperFunction.screenWidth() * 0.3,
-                      image: AssetImage(isDarkMode
-                          ? "assets/logos/logo_white.png"
-                          : "assets/logos/logo_dark.png")),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    "Wellcome Back,",
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "nhìn theo bóng dáng ai dần xa...",
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ],
+              header(isDarkMode: isDarkMode),
+              SizedBox(
+                height: 20,
               ),
-              SizedBox(height: 20,),
-              Form(
-                  child: Column(
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email),
-                        labelText: "email",
-                        border: OutlineInputBorder()),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.password),
-                        border: OutlineInputBorder()),
-                  )
-                ],
-              ))
-              // form
-
-              //divider
-
-              //footer
+              inputForm(),
+              SizedBox(
+                height: 20,
+              ),
+              Cusdevider(),
+              SizedBox(
+                height: 20,
+              ),
+              Cusfooter()
             ],
           ),
         ),
@@ -73,3 +50,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
