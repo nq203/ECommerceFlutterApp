@@ -1,0 +1,4 @@
+class CusColors{
+  CusColors._();
+  
+}
