@@ -15,11 +15,11 @@ class onboardNextButton extends StatelessWidget {
         right: 10,
         child: ElevatedButton(
           onPressed: controller.nextPage,
-          child: Icon(
+          style: ElevatedButton.styleFrom(shape: const CircleBorder()),
+          child: const Icon(
             Icons.arrow_forward_ios,
             color: Colors.black,
           ),
-          style: ElevatedButton.styleFrom(shape: CircleBorder()),
         ));
   }
 }

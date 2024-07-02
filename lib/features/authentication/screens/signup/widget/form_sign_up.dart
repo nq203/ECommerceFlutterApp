@@ -1,4 +1,6 @@
+import 'package:ecommer/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FormSignUp extends StatefulWidget {
   const FormSignUp({
@@ -20,16 +22,16 @@ class _FormSignUpState extends State<FormSignUp> {
               children: [
                 Expanded(
                   child: TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.person),
                         labelText: "First name",
                         border: OutlineInputBorder()),
                   ),
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Expanded(
                   child: TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.person),
                         labelText: "Family name",
                         border: OutlineInputBorder()),
@@ -37,33 +39,33 @@ class _FormSignUpState extends State<FormSignUp> {
                 ),
               ],
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.account_box),
                   labelText: "Username",
                   border: OutlineInputBorder()),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.mail),
                   labelText: "Email",
                   border: OutlineInputBorder()),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.phone_android),
                   labelText: "Phone Number",
                   border: OutlineInputBorder()),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             TextFormField(
               obscureText: hidePassword,
               textAlignVertical: TextAlignVertical.center,
               decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.password),
+                  prefixIcon: const Icon(Icons.password),
                   suffixIcon: IconButton(
                     icon: Icon(hidePassword
                         ? Icons.visibility_off
@@ -74,24 +76,24 @@ class _FormSignUpState extends State<FormSignUp> {
                       });
                     },
                   ),
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   labelText: "password"),
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Checkbox(value: true, onChanged: (value)=>{}),
 
-                SizedBox(width: 10,),
-                Text("I agree to Privacy Policy and Terms of use")
+                const SizedBox(width: 10,),
+                const Text("I agree to Privacy Policy and Terms of use")
 
               ],
             ),
             SizedBox(
                 width: double.infinity,
                 height: 60,
-                child: ElevatedButton(onPressed: ()=>{}, child: Text("Create Account"))),
+                child: ElevatedButton(onPressed: ()=>{Get.to(()=>const VerifyEmailScreen())}, child: const Text("Create Account"))),
           ],
         ));
   }

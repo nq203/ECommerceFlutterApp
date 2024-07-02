@@ -13,6 +13,6 @@ class onboardSkipButton extends StatelessWidget {
     return Positioned(
         top: DeviceUtils.getAppBarHeight(),
         right: 10,
-        child:  TextButton(onPressed: controller.skipPage, child: Text("Skip")));
+        child:  TextButton(onPressed: controller.skipPage, child: const Text("Skip")));
   }
 }

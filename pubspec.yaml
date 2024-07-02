@@ -39,6 +39,7 @@ flutter:
     - assets/logos/
     - assets/images/
     - assets/images/onboard_image/
+    - assets/images/animations/
 
   # example:
   # fonts:

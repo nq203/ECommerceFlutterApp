@@ -14,20 +14,20 @@ class header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         Image(
             height: HelperFunction.screenWidth() * 0.3,
             image: AssetImage(isDarkMode
                 ? "assets/logos/logo_white.png"
                 : "assets/logos/logo_dark.png")),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Text(
           "Wellcome Back",
           style: Theme.of(context).textTheme.headlineMedium,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(

@@ -1,7 +1,6 @@
 import 'package:ecommer/features/authentication/screens/login/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
 
 class OnboardingController extends GetxController {
   static OnboardingController get instance => Get.find();
@@ -18,7 +17,7 @@ class OnboardingController extends GetxController {
       currentPageIndex.value += 1;
       pageController.jumpToPage(currentPageIndex.value);
     } else {
-      Get.to(() =>LoginScreen());
+      Get.offAll(() =>const LoginScreen());
     }
   }
 

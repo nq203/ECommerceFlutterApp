@@ -12,14 +12,14 @@ class Cusfooter extends StatelessWidget {
       children: [
         IconButton(
             onPressed: () => {},
-            icon: Icon(
+            icon: const Icon(
               Icons.g_mobiledata_rounded,
               size: 40,
             )),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
-        IconButton(onPressed: () => {}, icon: Icon(Icons.facebook)),
+        IconButton(onPressed: () => {}, icon: const Icon(Icons.facebook)),
       ],
     );
   }

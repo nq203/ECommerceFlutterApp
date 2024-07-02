@@ -1,4 +1,3 @@
-import 'package:ecommer/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 
 class spaceStyle{

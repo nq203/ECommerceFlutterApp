@@ -2,9 +2,7 @@ import 'package:ecommer/common/styles/space_style.dart';
 import 'package:ecommer/features/authentication/screens/login/widget/header.dart';
 
 import 'package:ecommer/utils/helppers/helper_functions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'widget/divider.dart';
 import 'widget/footer.dart';
@@ -31,18 +29,18 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               // header
               header(isDarkMode: isDarkMode),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              inputForm(),
-              SizedBox(
+              const inputForm(),
+              const SizedBox(
                 height: 20,
               ),
-              Cusdevider(),
-              SizedBox(
+              const Cusdevider(),
+              const SizedBox(
                 height: 20,
               ),
-              Cusfooter()
+              const Cusfooter()
             ],
           ),
         ),
